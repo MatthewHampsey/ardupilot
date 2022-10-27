@@ -68,7 +68,7 @@ def show_log(viewer,filename):
     scale = 0.01
 
     while True:
-        m = mlog.recv_match(type=['POST', 'POSB', 'ATT'])
+        m = mlog.recv_match(type=['POST', 'POSB', 'POSM', 'ATT'])
         if m is None:
             break
         if m.get_type() == 'POST' and ATT is not None:
